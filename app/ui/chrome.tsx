@@ -85,9 +85,28 @@ const footerStyle = css({
   },
 })
 
-export function Header() {
+const headerDarkStyle = css({
+  background: "rgba(34,32,34,.72)",
+  borderBottom: "1px solid rgba(236,235,236,.08)",
+  "& .bar .logo": { color: "#ECEBEC" },
+  "& .bar .brand": { color: "#ECEBEC" },
+  "& nav a": { color: "#A5A4A8" },
+  "& nav a:hover": { color: "#fff", background: "rgba(255,255,255,.08)" },
+  "& .bar .btn-primary": {
+    background: "transparent",
+    color: "var(--green)",
+    border: "1px solid rgba(46,255,155,.45)",
+    borderBottom: "1px solid rgba(46,255,155,.45)",
+    boxShadow: "none",
+  },
+  "& .bar .btn-primary:hover": { background: "rgba(46,255,155,.1)" },
+  "& .bar .btn-primary:active": { transform: "none", paddingBottom: "9px" },
+  "& :focus-visible": { outlineColor: "#fff" },
+})
+
+export function Header(handle: Handle<{ dark?: boolean }>) {
   return () => (
-    <header mix={headerStyle}>
+    <header mix={handle.props?.dark ? [headerStyle, headerDarkStyle] : headerStyle}>
       <div class="wrap bar">
         <a class="brand" href="/" {...PREFETCH}>
           <Logo />
