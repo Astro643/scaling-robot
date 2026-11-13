@@ -1,7 +1,0 @@
-node_modules
-build
-.cache
-.vercel
-.env
-.env.*
-*.log
