@@ -17,7 +17,8 @@ const splashStyle = css({
   minHeight: "calc(100svh - 80px)",
   display: "grid",
   placeItems: "center",
-  background: "var(--dark)",
+  background:
+    "radial-gradient(ellipse 1100px 480px at 50% -140px, rgba(46,255,155,.13), transparent 62%), var(--dark)",
   color: "#ECEBEC",
   "&::before": {
     content: '""',

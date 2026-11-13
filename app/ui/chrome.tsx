@@ -86,8 +86,10 @@ const footerStyle = css({
 })
 
 const headerDarkStyle = css({
-  background: "rgba(34,32,34,.72)",
-  borderBottom: "1px solid rgba(236,235,236,.08)",
+  background: "rgba(34,32,34,.38)",
+  backdropFilter: "saturate(1.8) blur(22px)",
+  WebkitBackdropFilter: "saturate(1.8) blur(22px)",
+  borderBottom: "1px solid rgba(236,235,236,.07)",
   "& .bar .logo": { color: "#ECEBEC" },
   "& .bar .brand": { color: "#ECEBEC" },
   "& nav a": { color: "#A5A4A8" },
